@@ -1,0 +1,14 @@
+.header-design{
+    background-color: rgb(228, 224, 224);
+    color: black;
+    
+}
+.nav-btn{
+    text-decoration: none;
+    margin: 9px;
+    color: rgb(6, 135, 139);
+    font-weight: 500;
+}
+.nav-hover :hover {
+    color: red;
+}

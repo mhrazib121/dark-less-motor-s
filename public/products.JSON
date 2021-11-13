@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "img": "https://images.carandbike.com/bike-images/medium/kawasaki/z650rs/kawasaki-z650rs.webp?v=12",
+        "name": "Kawasaki Z650RS",
+        "description": "A true middleweight naked sportbike for a broad range of riders, the all-new 2022 Z650RS tempts the eye with the timeless beauty of a retro sport. Distinguishing the Z650RS from the larger displacement Z900RS is a slimmer tank and a shorter, more compact tail—all contributing to light handling and an approachable nature.",
+        "price": 5000
+    },
+    {
+        "id": 2,
+        "img": "https://images.carandbike.com/bike-images/colors/bajaj/pulsar-n250/bajaj-pulsar-n250-techno-grey.webp?v=2",
+        "name": "Bajaj Pulsar N250",
+        "description": "Bajaj Pulsar N250 is a street bike available at a starting price of Rs. 1,38,044 in India. It is available in only 1 variant and 1 colour. The Bajaj Pulsar N250 is powered by 249.07cc BS6 engine which develops a power of 24.1 bhp and a torque of 21.5 Nm. With both front and rear disc brakes, Bajaj Pulsar N250 comes up with anti-locking braking system. This Pulsar N250 bike weighs 162 kg and has a fuel tank capacity of 14 liters.",
+        "price": 2500
+    },
+    {
+        "id": 3,
+        "img": "https://images.carandbike.com/bike-images/colors/bajaj/pulsar-f250/bajaj-pulsar-f250-racing-red.webp?v=8",
+        "name": "Bajaj Pulsar F250",
+        "description": "Bajaj Pulsar F250 is a street bike available at a starting price of Rs. 1,40,045 in India. It is available in only 1 variant and 2 colours. The Bajaj Pulsar F250 is powered by 249.07cc BS6 engine which develops a power of 24.1 bhp and a torque of 21.5 Nm. With both front and rear disc brakes, Bajaj Pulsar F250 comes up with anti-locking braking system. This Pulsar F250 bike weighs 164 kg and has a fuel tank capacity of 14 liters.",
+        "price": 3000
+    },
+    {
+        "id": 4,
+        "img": "https://images.carandbike.com/bike-images/large/bmw/c-400-gt/bmw-c-400-gt.webp?v=1",
+        "name": "BMW C 400 GT",
+        "description": "BMW C 400 GT is a bike available at a starting price of  $10,000 in India. It is available in only 1 variant and 3 colours. The BMW C 400 GT is powered by 350cc BS6 engine which develops a power of 33.5 bhp and a torque of 35.25 Nm. With both front and rear disc brakes, BMW C 400 GT comes up with anti-locking braking system. This C 400 GT bike weighs 202 kg and has a fuel tank capacity of 12.8 liters.",
+        "price": 10000
+    },
+    {
+        "id": 5,
+        "img": "https://images.carandbike.com/bike-images/colors/tvs/jupiter-125/tvs-jupiter-125-pristine-white.webp?v=8",
+        "name": "TVS Jupiter 125",
+        "description": "TVS Jupiter 125 is a bike available at a starting price of Rs. $1,200 in India. It is available in only 1 variant and 3 colours. The BMW C 400 GT is powered by 350cc BS6 engine which develops a power of 33.5 bhp and a torque of 35.25 Nm. With both front and rear disc brakes, BMW C 400 GT comes up with anti-locking braking system. This C 400 GT bike weighs 202 kg and has a fuel tank capacity of 12.8 liters.",
+        "price": 1200
+    },
+    {
+        "id": 6,
+        "img": "https://imgd.aeplcdn.com/393x221/bw/models/yamaha-mt-15-bs-vi20200204191522.jpg?q=85",
+        "name": "Yamaha MT 15",
+        "description": "Yamaha MT 15 is a street bike available at a starting price of Rs. 1,47,658 in India. It is available in 3 variants and 4 colours with top variant price starting from Rs. 1,50,760. The Yamaha MT 15 is powered by 155cc BS6 engine which develops a power of 18.23 bhp and a torque of 13.9 Nm. With both front and rear disc brakes, Yamaha MT 15 comes up with anti-locking braking system. This MT 15 bike weighs 138 kg and has a fuel tank capacity of 10 liters.",
+        "price": 4500
+    },
+    {
+        "id": 7,
+        "img": "https://imgd.aeplcdn.com/393x221/n/cw/ec/103795/yzf-r15-right-front-three-quarter-7.jpeg?isig=0&q=85",
+        "name": "Yamaha YZF R15 V4",
+        "description": "Yamaha YZF R15 V4 is a sports bike available at a starting price of Rs. 1,71,575 in India. It is available in 5 variants and 5 colours with top variant price starting from Rs. 1,83,575. The Yamaha YZF R15 V4 is powered by 155cc BS6 engine which develops a power of 18.1 bhp and a torque of 14.2 Nm. With both front and rear disc brakes, Yamaha YZF R15 V4 comes up with anti-locking braking system. This YZF R15 V4 bike weighs 142 kg and has a fuel tank capacity of 11 liters.",
+        "price": 4800
+    },
+    {
+        "id": 8,
+        "img": "https://imgd.aeplcdn.com/393x221/bw/models/yamaha-yzf-r15-v3-dual-channel-abs--bs-vi20200109152444.jpg?q=85",
+        "name": "Yamaha YZF R15 V3",
+        "description": "The Yamaha R15 changed the 150cc segment in the Indian market the way the CBZ did when it was launched. It was an everyday motorcycle that could genuinely be used as a trackday tool. The second version of the R15 traded practicality for more focused performance, but the advent of the KTM RC200 meant that a far better performance was available for the sportbike enthusiasts at a similar price. The R15 Version 3.0 reduces that gap significantly with technology.",
+        "price": 4500
+    },
+    
+    {
+        "id": 9,
+        "img": "https://imgd.aeplcdn.com/393x221/bw/models/suzuki-gixxer-sf-standard--bs-vi20210628170629.jpg?q=85",
+        "name": "Suzuki Gixxer SF",
+        "description": "Suzuki Gixxer SF is a sports bike available at a starting price of Rs. 1,30,925 in India. It is available in only 1 variant and 3 colours. The Suzuki Gixxer SF is powered by 155cc BS6 engine which develops a power of 13.4 bhp and a torque of 13.8 Nm. With both front and rear disc brakes, Suzuki Gixxer SF comes up with anti-locking braking system. This Gixxer SF bike weighs 148 kg and has a fuel tank capacity of 12 liters.",
+        "price": 4000
+    },
+    {
+        "id": 10,
+        "img": "https://imgd.aeplcdn.com/393x221/n/cw/ec/1/versions/royalenfield-classic-350-2021-redditch-single-channel-abs.jpg?q=85",
+        "name": "Royal Enfield Classic 350",
+        "description": "Royal Enfield Classic 350 is a cruiser bike available at a starting price of Rs. 1,84,374 in India. It is available in 5 variants and 11 colours with top variant price starting from Rs. 2,15,118. The Royal Enfield Classic 350 is powered by 349cc BS6 engine which develops a power of 20.2 bhp and a torque of 27 Nm. With both front and rear disc brakes, Royal Enfield Classic 350 comes up with anti-locking braking system. This Classic 350 bike weighs 195 kg and has a fuel tank capacity of 13 liters.        ",
+        "price": 2200
+    },
+    {
+        "id": 11,
+        "img": "https://imgd.aeplcdn.com/393x221/bw/models/tvs-apache-rtr-160-front-disc--abs--bs-vi20200122150111.jpg?q=85",
+        "name": "TVS Apache RTR 160",
+        "description": "TVS Apache RTR 160 is a street bike available at a starting price of Rs. 1,07,242 in India. It is available in 2 variants and 6 colours with top variant price starting from Rs. 1,10,243. The TVS Apache RTR 160 is powered by 159.7cc BS6 engine which develops a power of 15.31 bhp and a torque of 13.9 Nm. With front disc and rear drum brakes, TVS Apache RTR 160 comes up with anti-locking braking system. This Apache RTR 160 bike weighs 139 kg and has a fuel tank capacity of 12 liters.        ",
+        "price": 2200
+    }
+]
