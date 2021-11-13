@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <div>
             <UserHeader></UserHeader>
-            <h1> Dashboard </h1>
+            <h1 className="text-center text-primary mt-5"> Welcome To Deshboard </h1>
         </div>
     );
 };

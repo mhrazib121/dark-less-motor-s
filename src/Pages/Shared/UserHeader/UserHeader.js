@@ -8,6 +8,8 @@ const UserHeader = () => {
     const { user, logOut } = useAuth();
     return (
         <div>
+             {/* className="sticky-top"  */}
+            
             <Navbar collapseOnSelect expand="lg" className="header-design " variant="dark">
                 <Container>
                     <Navbar.Brand >

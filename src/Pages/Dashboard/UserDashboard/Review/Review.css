@@ -1,0 +1,17 @@
+.form-field{
+   
+    display: flex;
+    justify-content: center;
+}
+.feedback-field{
+    flex-direction: column;
+align-items: center;
+width: 50%;
+}
+
+.feedback-field input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-color: #fd0da1;
+}
