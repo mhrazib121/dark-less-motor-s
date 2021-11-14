@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://evening-retreat-75203.herokuapp.com/orders")
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [orders])
@@ -16,7 +16,7 @@ const ManageAllOrders = () => {
     const cancelOrder = id => {
         const proceed = window.confirm('Are You Sure? Do You Want To Cancel your Order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://evening-retreat-75203.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -31,10 +31,10 @@ const ManageAllOrders = () => {
         };
     };
 
-    const updateOrder = id =>{
+    const updateOrder = id => {
         const proceed = window.confirm('Do Want To Update Order Status');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://evening-retreat-75203.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -48,7 +48,7 @@ const ManageAllOrders = () => {
                         alert('Status Update Successfully');
                     }
                 })
-        } 
+        }
     }
     return (
         <div>

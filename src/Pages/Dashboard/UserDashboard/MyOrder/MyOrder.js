@@ -6,23 +6,23 @@ import UserHeader from '../../../Shared/UserHeader/UserHeader';
 import OrderItem from '../../Items/OrderItem/OrderItem';
 
 const MyOrder = () => {
-    const {user} = useAuth();
-    const [orders, setOrders]= useState([])
+    const { user } = useAuth();
+    const [orders, setOrders] = useState([])
 
-    useEffect(()=>{
-        fetch("http://localhost:5000/orders")
-        .then(res=> res.json())
-        .then(data=>{
-            const myOrder = data.filter(order=> order.email === user.email);
-            setOrders(myOrder)
-        })
-    },[])
+    useEffect(() => {
+        fetch("https://evening-retreat-75203.herokuapp.com/orders")
+            .then(res => res.json())
+            .then(data => {
+                const myOrder = data.filter(order => order.email === user.email);
+                setOrders(myOrder)
+            })
+    }, [])
 
     // Order Cancel 
     const cancelOrder = id => {
         const proceed = window.confirm('Are You Sure? Do You Want To Cancel Your Order');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://evening-retreat-75203.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -39,7 +39,7 @@ const MyOrder = () => {
     return (
         <div>
             <>
-            <UserHeader ></UserHeader>
+                <UserHeader ></UserHeader>
             </>
             <h1 className="text-center pt-5 my-5"> My <span className="text-warning">Orders</span> </h1>
             <Row className="g-3 m-3" xs={1} md={3} >

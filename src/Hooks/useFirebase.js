@@ -10,7 +10,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    const [admin, setAdmin]= useState()
+    const [admin, setAdmin] = useState()
 
 
     const auth = getAuth();
@@ -90,19 +90,19 @@ const useFirebase = () => {
     // Save user 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://evening-retreat-75203.herokuapp.com/users', {
             method: method,
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(user)
         })
-        .then()
+            .then()
     }
-    useEffect(()=>{
-        fetch(`http://localhost:5000/users/${user.email}`)
-        .then(res=> res.json())
-        .then(data=> setAdmin(data.admin))
+    useEffect(() => {
+        fetch(`https://evening-retreat-75203.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
     }, [user.email])
 
     return {

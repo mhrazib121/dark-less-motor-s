@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 const useReview = () => {
     const [reviews, setReviews] = useState([]);
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/reviews')
-        .then(res=> res.json())
-        .then(data=> setReviews( data))
-    },[])
+    useEffect(() => {
+        fetch('https://evening-retreat-75203.herokuapp.com/reviews')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
     return [
         reviews
     ];

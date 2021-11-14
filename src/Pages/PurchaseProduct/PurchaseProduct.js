@@ -8,10 +8,10 @@ import './PurchaseProduct.css'
 
 const PurchaseProduct = () => {
     const { register, handleSubmit, reset } = useForm();
-    const [ products]  = useProducts();
+    const [products] = useProducts();
     const { id } = useParams();
     const history = useHistory();
-    const {user} = useAuth();
+    const { user } = useAuth();
     console.log(id);
     const productData = products.find(product => product._id === id);
     console.log(productData);
@@ -21,7 +21,7 @@ const PurchaseProduct = () => {
         data.package = productData;
         data.status = 'Pending';
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://evening-retreat-75203.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Placing order successfully');
@@ -44,7 +44,7 @@ const PurchaseProduct = () => {
                     <p>To explore world <span className="text-warning">Ride Safely !</span></p>
                     <form className=" d-block" onSubmit={handleSubmit(onSubmit)}>
 
-                        <input defaultValue= {user.displayName} {...register("name", { required: true })} />
+                        <input defaultValue={user.displayName} {...register("name", { required: true })} />
 
                         <input defaultValue={user.email} {...register("email", { required: true })} />
                         <input placeholder="Address" defaultValue="" {...register("address", { required: true })} />

@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         console.log(data)
         setEmail(data);
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://evening-retreat-75203.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,13 +23,13 @@ const MakeAdmin = () => {
     return (
         <div>
             <AdminHeader></AdminHeader>
-            <div className="App mt-5">
+            <div className=" mt-5">
                 <h1>Make Admin</h1>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="w-25 p-2" type="email" placeholder="Enter Email address" {...register("email")} />
+                    <input className="w-50 p-2" type="email" placeholder="Enter Email address" {...register("email")} />
                     <br />
-                    <input className="mt-3" type="submit" value="Admin" />
+                    <input className="w-25 mt-3" type="submit" value="Admin" />
                 </form>
             </div>
         </div>

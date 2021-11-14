@@ -9,10 +9,10 @@ import './Review.css'
 
 const Review = () => {
     const { user } = useAuth();
-    const history= useHistory();
-    const { register, handleSubmit, reset} = useForm();
+    const history = useHistory();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://evening-retreat-75203.herokuapp.com/reviews', data)
             .then(res => {
                 // console.log(res)
                 if (res.data.insertedId) {
