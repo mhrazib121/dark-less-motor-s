@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import useProducts from '../../../../Hooks/useProducts';
 import AdminHeader from '../../../Shared/Header/AdminHeader/AdminHeader';
 import ManageProductItem from '../../Items/ManageProductItem/ManageProductItem';
 
 const MangeProducts = () => {
-    const [products, setProducts] = useProducts();
+    const [products, setProducts] = useState([]);
 
+    useEffect(() => {
+        fetch("https://evening-retreat-75203.herokuapp.com/products")
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [products])
 
+    console.log(products, setProducts)
     // Delete a Product
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are You Sure? Do You Want To Delete?');
@@ -36,13 +42,11 @@ const MangeProducts = () => {
             </div>
             <div className="container">
                 <div className="container my-5">
-                    <Container>
-                        <Row xs={1} md={3} className="g-5 p-4">
+                <Row xs={1} md={3} className="g-5 p-4">
                             {
-                                products.map(product => <ManageProductItem key={product._id} product={product} handleDeleteProduct={handleDeleteProduct}></ManageProductItem>)
+                                products.map(product => <ManageProductItem key={product?._id} product={product} handleDeleteProduct={handleDeleteProduct}> </ManageProductItem>)
                             }
                         </Row>
-                    </Container>
                 </div>
             </div>
         </div>

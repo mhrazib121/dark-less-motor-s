@@ -1,9 +1,12 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div>
-            <h1>This is footer</h1>
+        <div className="footer-img p-5 bg-dark text-white App">
+            <h4>
+            Copyright © 2021 All rights reserved Dark Less Motor's
+            </h4>
         </div>
     );
 };

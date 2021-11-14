@@ -26,7 +26,7 @@ const AdminHeader = () => {
                             <NavLink className="nav-btn" to="/manageproducts">Manage Products</NavLink>
                         </Nav>
                         <Nav>
-                            <button onClick={logOut}> logOut </button>
+                            <button className="btn btn-primary" onClick={logOut}> logOut </button>
 
                         </Nav>
                     </Navbar.Collapse>

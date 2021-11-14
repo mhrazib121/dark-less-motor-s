@@ -19,6 +19,7 @@ import AddProducts from './Pages/Dashboard/AdminDashboard/AddProducts/AddProduct
 import ManageAllOrders from './Pages/Dashboard/AdminDashboard/ManageAllOrders/ManageAllOrders';
 import MangeProducts from './Pages/Dashboard/AdminDashboard/ManageProducts/MangeProducts';
 import AdminRoute from './Pages/Shared/Header/AdminRoute/AdminRoute';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -93,6 +94,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

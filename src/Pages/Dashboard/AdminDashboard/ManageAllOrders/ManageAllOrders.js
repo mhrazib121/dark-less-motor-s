@@ -24,7 +24,7 @@ const ManageAllOrders = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('Order Cancel Successfully');
-                        const remainingOrders = orders.filter(booking => booking._id !== id);
+                        const remainingOrders = orders.filter(order => order._id !== id);
                         setOrders(remainingOrders);
                     };
                 });
@@ -56,8 +56,7 @@ const ManageAllOrders = () => {
             <h1>manage all orders</h1>
             <Row className="g-3 m-3" xs={1} md={3} >
                 {
-                    orders.map(order => <ManageOrderItem key={order?._id} order={order} cancelOrder={cancelOrder} updateOrder={updateOrder}> </ManageOrderItem>
-                    )
+                    orders.map(order => <ManageOrderItem key={order?._id} order={order} cancelOrder={cancelOrder} updateOrder={updateOrder}> </ManageOrderItem>)
                 }
             </Row>
         </div>
