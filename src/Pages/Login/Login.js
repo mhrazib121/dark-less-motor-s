@@ -7,7 +7,7 @@ import { useHistory, useLocation } from 'react-router';
 import './Login.css'
 
 const Login = () => {
-    const{loginUser, signInUsingGoogle} = useAuth()
+    const{loginUser, signInUsingGoogle, saveUser} = useAuth()
     const { register, handleSubmit, reset } = useForm();
     const location= useLocation();
     const history = useHistory();
@@ -26,6 +26,8 @@ const Login = () => {
             // const user = result.user;
             // setUser(user);
             // console.log(user);
+            const user = result.user
+            saveUser(user.email, user.displayName, 'PUT')
             history.push(redirect_url)
             
         })

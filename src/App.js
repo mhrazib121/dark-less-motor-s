@@ -14,6 +14,10 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Pay from './Pages/Dashboard/UserDashboard/Pay/Pay';
 import MyOrder from './Pages/Dashboard/UserDashboard/MyOrder/MyOrder';
 import Review from './Pages/Dashboard/UserDashboard/Review/Review';
+import MakeAdmin from './Pages/Dashboard/AdminDashboard/MakeAdmin/MakeAdmin';
+import AddProducts from './Pages/Dashboard/AdminDashboard/AddProducts/AddProducts';
+import ManageAllOrders from './Pages/Dashboard/AdminDashboard/ManageAllOrders/ManageAllOrders';
+import MangeProducts from './Pages/Dashboard/AdminDashboard/ManageProducts/MangeProducts';
 
 function App() {
   return (
@@ -65,6 +69,24 @@ function App() {
               <Review></Review>
             </Route>
 
+            {/* Admin Dashboar route  */}
+            <Route path="/makeadmin">
+              <MakeAdmin></MakeAdmin>
+            </Route>
+
+            <Route path="/addproducts">
+              <AddProducts></AddProducts>
+            </Route>
+
+            <Route path="/manageallorders">
+              <ManageAllOrders></ManageAllOrders>
+            </Route>
+
+            <Route path="/manageproducts">
+             <MangeProducts></MangeProducts>
+            </Route>
+
+            {/* Invalid Page */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>

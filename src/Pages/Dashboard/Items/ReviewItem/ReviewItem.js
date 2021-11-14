@@ -1,18 +1,35 @@
 import React from 'react';
+import Avatar from 'react-avatar';
 import { Card, Col } from 'react-bootstrap';
+import Rating from 'react-rating';
+import useAuth from '../../../../Hooks/useAuth';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStar } from '@fortawesome/free-solid-svg-icons'
+// import { faStar } from '@fortawesome/free-regular-svg-icons'
 
 const ReviewItem = (props) => {
-    const {name, email, rating, feedback}=props.review
+    // const emptySymbol = <FontAwesomeIcon icon={["< far fa-star"]} />
+    // const fullSymbol = <FontAwesomeIcon icon={["fas fa-star"]} />
+    const { name, email, rating, feedback } = props.review;
+    const {user} = useAuth();
     return (
         <div className="container">
             <Col className="shadow-lg">
                 <Card >
                     {/* <Card.Img variant="top" src={img} /> */}
                     <Card.Body>
+                    <Avatar src={user.photoUrl} name={user.displayName} size="100" round={true} />
                         <Card.Title className="text-color fw-bold">{name}</Card.Title>
                         <div>
+                        
                             {/* <h6>Name: {props.order.name}</h6> */}
                             <h6>Email: {email}</h6>
+                            <Rating
+                                emptySymbol="far fa-star"
+                                fullSymbol="fas fa-star"
+                                initialRating={rating}
+                                readonly
+                            ></Rating>
                             <h6>Rating: {rating}</h6>
                             <h6>Feedback: {feedback} </h6>
                         </div>

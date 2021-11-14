@@ -10,22 +10,29 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    
+
 
     const auth = getAuth();
 
-    const registerUser = (email, password) => {
+    const registerUser = (email, password, name, history) => {
         console.log(email, password);
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 // Signed in 
-                const user = result.user;
-                setUser(user)
+                // const user = result.user;
+
+                const newUser = { email, displayName: name };
+                setUser(newUser);
+                saveUser(email, name, 'POST');
+
+                // console.log(result);
+                console.log(newUser);
+                history.replace('/');
             })
             .catch((error) => {
             })
-            .finally(()=> setIsLoading(false))
+            .finally(() => setIsLoading(false))
     }
     const logOut = () => {
         setIsLoading(true)
@@ -35,7 +42,7 @@ const useFirebase = () => {
             }).catch((error) => {
                 // An error happened.
             })
-            .finally(()=> setIsLoading(false))
+            .finally(() => setIsLoading(false))
     }
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -53,7 +60,7 @@ const useFirebase = () => {
     // *******************************
     const loginUser = (email, password) => {
         setIsLoading(true)
-      return signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
             // .then(result => {
             //     // Signed in 
             //     const user = result.user;
@@ -63,20 +70,33 @@ const useFirebase = () => {
             .catch((error) => {
                 const errorMessage = error.message;
             })
-            .finally(()=> setIsLoading(false))
+            .finally(() => setIsLoading(false))
     }
 
     // Google Login Syestem 
     // ********************
     const signInUsingGoogle = () => {
-        setIsLoading (true)
-         return signInWithPopup(auth, googleProvider)
+        setIsLoading(true)
+        return signInWithPopup(auth, googleProvider)
 
-         .catch((error)=>{
-            // setError(error.massage)
+            .catch((error) => {
+                // setError(error.massage)
+            })
+            .finally(() => setIsLoading(false))
+
+    }
+
+    // Save user 
+    const saveUser = (email, displayName, method) => {
+        const user = { email, displayName };
+        fetch('http://localhost:5000/users', {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
         })
-        .finally(()=> setIsLoading(false))
-            
+        .then()
     }
 
     return {
@@ -86,6 +106,7 @@ const useFirebase = () => {
         logOut,
         loginUser,
         signInUsingGoogle,
+        saveUser,
         isLoading
     };
 };
