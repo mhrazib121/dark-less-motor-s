@@ -3,17 +3,19 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Header from '../Shared/Header/Header';
+import { useHistory, useLocation } from 'react-router';
 
 const SignUp = () => {
     const {registerUser}=useAuth();
     const { register, handleSubmit, reset} = useForm();
+    const history = useHistory();
+    const location = useLocation();
 
     // Submit user details 
   const onSubmit = data => {
       if (data.password === data.confirmPassword){
-        registerUser(data.email, data.password, data.name);
+        registerUser(data.email, data.password, data.name, history, location);
         reset();
-        console.log(data)
       }
       else{
           alert(' Password did not match')

@@ -18,6 +18,8 @@ import MakeAdmin from './Pages/Dashboard/AdminDashboard/MakeAdmin/MakeAdmin';
 import AddProducts from './Pages/Dashboard/AdminDashboard/AddProducts/AddProducts';
 import ManageAllOrders from './Pages/Dashboard/AdminDashboard/ManageAllOrders/ManageAllOrders';
 import MangeProducts from './Pages/Dashboard/AdminDashboard/ManageProducts/MangeProducts';
+import AdminRoute from './Pages/Shared/Header/AdminRoute/AdminRoute';
+
 
 function App() {
   return (
@@ -53,38 +55,38 @@ function App() {
             </Route>
 
             {/* User Dashboar route  */}
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/pay">
+            <PrivateRoute path="/pay">
               <Pay></Pay>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/myorder">
+            <PrivateRoute path="/myorder">
               <MyOrder></MyOrder>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/review">
+            <PrivateRoute path="/review">
               <Review></Review>
-            </Route>
+            </PrivateRoute>
 
             {/* Admin Dashboar route  */}
-            <Route path="/makeadmin">
+            <AdminRoute path="/makeadmin">
               <MakeAdmin></MakeAdmin>
-            </Route>
+            </AdminRoute>
 
-            <Route path="/addproducts">
+            <AdminRoute path="/addproducts">
               <AddProducts></AddProducts>
-            </Route>
+            </AdminRoute>
 
-            <Route path="/manageallorders">
+            <AdminRoute path="/manageallorders">
               <ManageAllOrders></ManageAllOrders>
-            </Route>
+            </AdminRoute>
 
-            <Route path="/manageproducts">
+            <AdminRoute path="/manageproducts">
              <MangeProducts></MangeProducts>
-            </Route>
+            </AdminRoute>
 
             {/* Invalid Page */}
             <Route path="*">

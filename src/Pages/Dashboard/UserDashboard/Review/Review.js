@@ -33,9 +33,9 @@ const Review = () => {
                     <br />
                     <input defaultValue={user.email} {...register("email", { required: true })} />
                     <br />
-                    <input placeholder="Provide rate" type="number" defaultValue="" {...register("rating", { required: true })} />
+                    <input placeholder="Provide rate" type="number" defaultValue="" {...register("rating", { required: true, min:1, max:5})} />
                     <br />
-                    <input placeholder="Provide your feedback" {...register("feedback", { required: true })} />
+                    <input placeholder="Provide your feedback" {...register("feedback",  { required: true })} />
                     <br />
 
                     <button className="btn btn-primary " type="submit">Submit</button>

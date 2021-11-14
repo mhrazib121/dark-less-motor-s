@@ -5,9 +5,9 @@ import useAuth from '../../../../Hooks/useAuth';
 
 
 const AdminRoute = ({ children, ...rest }) => {
-    const {user,admin, isLoading} = useAuth();
-    console.log(user)
-    if (isLoading) {
+    const {user,admin, loading} = useAuth();
+    console.log(admin, loading)
+    if (loading) {
         return <div className="justify-content-center d-flex">
             <Spinner className="text-center  my-4" animation="border" variant="danger" />
         </div>

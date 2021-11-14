@@ -22,14 +22,6 @@ const Header = () => {
                             <NavLink className="nav-btn" to="/products">products</NavLink>
                             <NavLink className="nav-btn" to="/about">About</NavLink>
                            
-
-                            {/* DropDown  */}
-                            {/* <NavDropdown className="color-primary" title="Dropdown" id="collasible-nav-dropdown">
-                                <NavDropdown.Item className="nav-btn" href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item className="nav-btn" href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item className="nav-btn" href="#action/3.3">Something</NavDropdown.Item>
-
-                            </NavDropdown> */}
                         </Nav>
                         <Nav>
                             {
@@ -37,11 +29,11 @@ const Header = () => {
                                     <>
                                     <NavLink className="nav-btn" to="/dashboard">Dashboard</NavLink>
                                     
-                                    <button onClick={logOut}> logOut </button>
+                                    <button className="btn btn-primary" onClick={logOut}> logOut </button>
                                     </>
                                     :
-                                    <>  <NavLink to="/login" className="nav-btn" >Login</NavLink>
-                                        <NavLink to="/signup" className="nav-btn" >
+                                    <>  <NavLink to="/login" className="text-white nav-btn btn btn-primary" >Login</NavLink>
+                                        <NavLink to="/signup" className="text-white nav-btn btn btn-primary" >
                                             Register
                                         </NavLink>
                                     </>

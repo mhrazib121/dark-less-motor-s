@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import authenticationInitialize from '../Firebase/authentication.init';
+import { useHistory } from 'react-router';
 
 
 authenticationInitialize()
@@ -10,42 +11,47 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    const [admin, setAdmin] = useState()
+    const [loading, setLoading] = useState(true);
+    const [admin, setAdmin] = useState(false);
+    // const history = useHistory()
 
 
     const auth = getAuth();
 
-    const registerUser = (email, password, name, history) => {
+    const registerUser = (email, password, name, history, location) => {
         console.log(email, password);
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 // Signed in 
-                // const user = result.user;
-
                 const newUser = { email, displayName: name };
                 setUser(newUser);
                 saveUser(email, name, 'POST');
 
-                // console.log(result);
-                console.log(newUser);
-                history.replace('/');
+                // Redirect
+                const redirect = location?.state?.from || '/';
+                history.replace(redirect);
+
             })
             .catch((error) => {
             })
             .finally(() => setIsLoading(false))
     }
-    const logOut = () => {
+    // Sign-out successful.
+    const logOut = (history, location) => {
         setIsLoading(true)
         signOut(auth)
             .then(() => {
-                // Sign-out successful.
+                // Redirect
+                const redirect = location?.state?.from || '/';
+                history.replace(redirect);
             }).catch((error) => {
                 // An error happened.
             })
             .finally(() => setIsLoading(false))
     }
     useEffect(() => {
+        
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
@@ -100,15 +106,18 @@ const useFirebase = () => {
             .then()
     }
     useEffect(() => {
+        setLoading(true)
         fetch(`https://evening-retreat-75203.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
+            .finally(setLoading(false))
     }, [user.email])
 
     return {
         user,
         error,
         admin,
+        loading,
         registerUser,
         logOut,
         loginUser,
