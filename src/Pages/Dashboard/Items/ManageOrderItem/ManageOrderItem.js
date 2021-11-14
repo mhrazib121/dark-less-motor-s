@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
-const OrderItem = (props) => {
+const ManageOrderItem = (props) => {
     const{_id, email, address, phone, status} = props.order;
     const {name, img, price}= props.order.package;
     return (
@@ -19,9 +19,12 @@ const OrderItem = (props) => {
                             <h6>Status: {status} </h6>
                         </div>
                         <div className="d-flex justify-content-between align-items-center">
-                            <button onClick={() => props.cancelOrder(_id)} type="button" className="btn">Cancel</button>
-                            <h4> Price: <span className="text-warning">${price}</span></h4>
+                            <button onClick={() => props.cancelOrder(_id)} type="button" className="btn btn-danger">Cancel</button>
+                            <h4> Price: $<span className="text-warning">{price}</span></h4>
                         </div>
+                        <br />
+                        <button onClick={() => props.updateOrder(_id)} type="button" className="btn btn-primary">Status Update</button>
+                        
                     </Card.Body>
                 </Card>
             </Col>   
@@ -29,4 +32,4 @@ const OrderItem = (props) => {
     );
 };
 
-export default OrderItem;
+export default ManageOrderItem;

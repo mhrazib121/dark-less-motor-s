@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../../../Hooks/useAuth';
 import logo from '../../../../Images/logo.png'
 
@@ -17,6 +18,7 @@ const AdminHeader = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto nav-hover ">
+                            <NavLink className="nav-btn" to="/home">Home</NavLink>
                             <NavLink className="nav-btn" to="/makeadmin">Make Admin</NavLink>
                             <NavLink className="nav-btn" to="/addproducts">Add Products</NavLink>
                             <NavLink className="nav-btn" to="/manageallorders">Manage All Orders</NavLink>
