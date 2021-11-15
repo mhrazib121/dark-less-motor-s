@@ -3,9 +3,7 @@ import Avatar from 'react-avatar';
 import { Card, Col } from 'react-bootstrap';
 import Rating from 'react-rating';
 import useAuth from '../../../../Hooks/useAuth';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faStar } from '@fortawesome/free-solid-svg-icons'
-// import { faStar } from '@fortawesome/free-regular-svg-icons'
+import './ReviewItem.css'
 
 const ReviewItem = (props) => {
     // const emptySymbol = <FontAwesomeIcon icon={["< far fa-star"]} />
@@ -13,9 +11,9 @@ const ReviewItem = (props) => {
     const { name, email, rating, feedback } = props.review;
     const {user} = useAuth();
     return (
-        <div className="container">
-            <Col className="shadow-lg">
-                <Card >
+        <div className="container my-2 rounded">
+            <Col>
+                <Card className="card-hover card-design">
                     {/* <Card.Img variant="top" src={img} /> */}
                     <Card.Body>
                     <Avatar src={user.photoUrl} name={user.displayName} size="100" round={true} />

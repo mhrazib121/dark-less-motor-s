@@ -53,7 +53,7 @@ const ManageAllOrders = () => {
     return (
         <div>
             <AdminHeader></AdminHeader>
-            <h1>manage all orders</h1>
+            <h1 className="text-center my-4">MANAGE All <span className="text-warning">ORDERS</span></h1>
             <Row className="g-3 m-3" xs={1} md={3} >
                 {
                     orders.map(order => <ManageOrderItem key={order?._id} order={order} cancelOrder={cancelOrder} updateOrder={updateOrder}> </ManageOrderItem>)

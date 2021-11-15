@@ -20,7 +20,7 @@ const AddProducts = () => {
     return (
         <div>
             <AdminHeader></AdminHeader>
-            <h1>add product</h1>
+            <h1 className="text-center my-4">ADD NEW <span className="text-warning">FEATURED PRODUCT</span></h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name",)} placeholder="product Name" />
                 <input {...register("description")} placeholder="Description" />

@@ -7,6 +7,9 @@ import Reviews from '../../Reviews/Reviews';
 import Header from '../../Shared/Header/Header';
 import TopBanner from '../TopBanner/TopBanner';
 import './Home.css';
+import image12 from '../../../Images/image 12.png'
+import image13 from '../../../Images/image 13.png'
+import image14 from '../../../Images/image 14.png'
 
 const Home = () => {
     const [products] = useProducts();
@@ -29,7 +32,19 @@ const Home = () => {
                     }
                 </Row>
                 <Link className="link-style" to="/products"> More Products </Link>
-                <hr/>
+                <hr />
+
+                {/* doidptierj */}
+                <div className="d-lg-flex align-items-center my-5 justify-content-center">
+                    <div className="m-2">
+                        <img className="rounded image " src="https://image.freepik.com/free-photo/handsome-man-biker-travelling-mototrcycle_1303-22154.jpg" alt="" />
+                    </div>
+                    <div className=" m-5">
+                        <h2 className="text-warning"> OUR COMMITMENT </h2>
+                        <p>Our constant endeavor is to support the company's mandate of providing highest level of customer satisfaction by taking good care of your two-wheeler service and maintenance through our vast network of committed dealers and service outlets spread across the country.
+                        </p>
+                    </div>
+                </div>
 
                 {/* Reviews Section */}
                 {/*******************/}

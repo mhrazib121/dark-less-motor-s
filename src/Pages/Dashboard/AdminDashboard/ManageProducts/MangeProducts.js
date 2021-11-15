@@ -37,7 +37,7 @@ const MangeProducts = () => {
         <div>
             <AdminHeader></AdminHeader>
             <div className="mt-5 mb-5 text-center ">
-                <h1>MANAGE <span className="text-warning">PRODUCTS</span></h1>
+                <h1 className="text-center my-4">MANAGE <span className="text-warning">PRODUCTS</span></h1>
                 <h5 className="text-danger">ADMIN CAN HANDLE THIS</h5>
             </div>
             <div className="container">

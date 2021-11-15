@@ -24,7 +24,7 @@ const MakeAdmin = () => {
         <div>
             <AdminHeader></AdminHeader>
             <div className=" mt-5">
-                <h1>Make Admin</h1>
+            <h1 className="text-center my-4">MAKE <span className="text-warning">ADMIN</span></h1>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input className="w-50 p-2" type="email" placeholder="Enter Email address" {...register("email")} />

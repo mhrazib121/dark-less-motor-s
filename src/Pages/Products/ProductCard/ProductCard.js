@@ -8,9 +8,9 @@ const ProductCard = (props) => {
     const { name, description, img, price, _id } = props.product;
     // console.log(serviceName)
     return (
-        <div  >
+        <div className="my-2">
             <Col className="gap-4">
-                <Card className="card-hover">
+                <Card className="card-hover card-design">
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
