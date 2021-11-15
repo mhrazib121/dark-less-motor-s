@@ -12,9 +12,11 @@ const Review = () => {
     const history = useHistory();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        data.img = user.photoURL;
         axios.post('https://evening-retreat-75203.herokuapp.com/reviews', data)
             .then(res => {
                 // console.log(res)
+                
                 if (res.data.insertedId) {
                     alert('Added Succesfully')
                     reset();

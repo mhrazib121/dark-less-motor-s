@@ -8,33 +8,29 @@ import './ReviewItem.css'
 const ReviewItem = (props) => {
     // const emptySymbol = <FontAwesomeIcon icon={["< far fa-star"]} />
     // const fullSymbol = <FontAwesomeIcon icon={["fas fa-star"]} />
-    const { name, email, rating, feedback } = props.review;
+    const { name, email, rating, feedback, img} = props.review;
     const {user} = useAuth();
+    console.log(user.photoURL);
+    console.log(user);
     return (
         <div className="container my-2 rounded">
             <Col>
-                <Card className="card-hover card-design">
+                <Card className="card-hover text-center card-design">
                     {/* <Card.Img variant="top" src={img} /> */}
                     <Card.Body>
-                    <Avatar src={user.photoUrl} name={user.displayName} size="100" round={true} />
+                    <Avatar className="mb-3" src={img} name={name} size="100" round={true} />
+                    {/* <img className="avatar " src={user.photoURL} alt="" /> */}
                         <Card.Title className="text-color fw-bold">{name}</Card.Title>
                         <div>
-                        
-                            {/* <h6>Name: {props.order.name}</h6> */}
-                            <h6>Email: {email}</h6>
                             <Rating
+                            className="text-warning"
                                 emptySymbol="far fa-star"
                                 fullSymbol="fas fa-star"
                                 initialRating={rating}
                                 readonly
                             ></Rating>
-                            <h6>Rating: {rating}</h6>
                             <h6>Feedback: {feedback} </h6>
                         </div>
-                        {/* <div className="d-flex justify-content-between align-items-center">
-                            <button onClick={() => props.cancelOrder(_id)} type="button" className="btn">Cancel</button>
-                            <h4> Price: <span className="text-success">${price}</span></h4>
-                        </div> */}
                     </Card.Body>
                 </Card>
             </Col>
