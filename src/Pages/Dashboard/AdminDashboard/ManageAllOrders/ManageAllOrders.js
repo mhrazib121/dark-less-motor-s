@@ -40,7 +40,7 @@ const ManageAllOrders = () => {
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({ status: 'Approved' })
+                body: JSON.stringify({ status: 'Shipped' })
             })
                 .then(res => res.json())
                 .then(data => {

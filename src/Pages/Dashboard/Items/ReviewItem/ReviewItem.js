@@ -6,8 +6,6 @@ import useAuth from '../../../../Hooks/useAuth';
 import './ReviewItem.css'
 
 const ReviewItem = (props) => {
-    // const emptySymbol = <FontAwesomeIcon icon={["< far fa-star"]} />
-    // const fullSymbol = <FontAwesomeIcon icon={["fas fa-star"]} />
     const { name, email, rating, feedback, img} = props.review;
     const {user} = useAuth();
     console.log(user.photoURL);
