@@ -40,7 +40,7 @@ const Home = () => {
                         <img className="rounded image " src="https://image.freepik.com/free-photo/handsome-man-biker-travelling-mototrcycle_1303-22154.jpg" alt="" />
                     </div>
                     <div className=" m-5">
-                        <h2 className="text-warning"> OUR COMMITMENT </h2>
+                        <h2 className="text-primary"> Our Commitment </h2>
                         <p>Our constant endeavor is to support the company's mandate of providing highest level of customer satisfaction by taking good care of your two-wheeler service and maintenance through our vast network of committed dealers and service outlets spread across the country.
                         </p>
                     </div>

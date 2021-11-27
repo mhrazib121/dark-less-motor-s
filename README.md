@@ -6,12 +6,12 @@ Welcome to [Dark Less Motor's](https://dark-less-motor-s.web.app/).
 
 In the project directory, you can run:
 
-### World Best Bike Sealer Company
+### A fully functional website based on MERN with login and registration features.
 
-### We have best servicing fatility 
+### There has Admin & User dashboard.
 
-### Easy payment system and return policy
+### Admin has access to make new admin, add products, update the delivery status.
 
-### 24/7 customer support
+### Users can make orders & cancel the order and can put reviews about services.
 
-### We have all branded and new bike collection
+### We have all branded and new bike collection.
