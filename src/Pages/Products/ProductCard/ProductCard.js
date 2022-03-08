@@ -9,14 +9,14 @@ const ProductCard = (props) => {
     // console.log(serviceName)
     return (
         <div className="my-2">
-            <Col className="gap-4">
+            <Col className="gap-">
                 <Card className="card-hover card-design">
-                    <Card.Img variant="top" src={img} />
+                    <Card.Img className='' variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <div>
 
-                            <h6> {description}</h6>
+                            <h6 className='description'> {description}</h6>
 
                         </div>
 

@@ -13,7 +13,7 @@ const ReviewItem = (props) => {
     return (
         <div className="container my-2 rounded">
             <Col>
-                <Card className="card-hover text-center card-design">
+                <Card className="card-hover text-center card-length card-design">
                     <Card.Body>
                     <Avatar className="mb-3" src={img} name={name} size="100" round={true} />
                         <Card.Title className="text-color fw-bold">{name}</Card.Title>
@@ -25,7 +25,7 @@ const ReviewItem = (props) => {
                                 initialRating={rating}
                                 readonly
                             ></Rating>
-                            <h6>Feedback: {feedback} </h6>
+                            <h6 className='pt-3'> {feedback} </h6>
                         </div>
                     </Card.Body>
                 </Card>
