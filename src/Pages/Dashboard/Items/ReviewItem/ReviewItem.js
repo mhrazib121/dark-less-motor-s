@@ -14,10 +14,8 @@ const ReviewItem = (props) => {
         <div className="container my-2 rounded">
             <Col>
                 <Card className="card-hover text-center card-design">
-                    {/* <Card.Img variant="top" src={img} /> */}
                     <Card.Body>
                     <Avatar className="mb-3" src={img} name={name} size="100" round={true} />
-                    {/* <img className="avatar " src={user.photoURL} alt="" /> */}
                         <Card.Title className="text-color fw-bold">{name}</Card.Title>
                         <div>
                             <Rating

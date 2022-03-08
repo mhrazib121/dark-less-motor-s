@@ -1,3 +1,17 @@
+.bg-top{
+    background-image: url('../../../Images/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 8%;
+}
 .img-height{
     max-height: 500px;
+}
+.top-btn{
+    padding: 12px 25px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
 }
