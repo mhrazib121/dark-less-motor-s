@@ -20,7 +20,7 @@ const TopBanner = () => {
                         <div className='col-lg-5 mt-5'>
                             <h1 className="text-dark text-uppercase"> <span>Darkless Motor's <br /></span > <span className='fs-5'>WORLD MOST 
                                 LATGEST  <span className='fw-bolder'>MOTORBIKE STORE</span></span></h1>
-                            <p className="text-warn"> Darkless Motor's the most latgest bike store in the wold can serve you latest qulity of motorcycle also you can sell here your motorcycle on it.</p>
+                            <p> Darkless Motor's the most latgest bike store in the wold can serve you latest qulity of motorcycle also you can sell here your motorcycle on it.</p>
                             <button className='top-btn'> Buy Now</button>
                         </div>
                         <div className='ms-auto col-lg-7'>
