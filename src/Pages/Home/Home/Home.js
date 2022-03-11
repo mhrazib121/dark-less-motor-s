@@ -48,17 +48,6 @@ const Home = () => {
                 <div className='img-bg3'> <h3 className='text-field text-center'> FIND SPARE PARTS</h3> </div>
             </Container>
             <br />
-            {/* Commitment */}
-            {/* <div className="d-lg-flex align-items-center my-5 justify-content-center">
-                <div className="m-2">
-                    <img className="rounded image " src="https://image.freepik.com/free-photo/handsome-man-biker-travelling-mototrcycle_1303-22154.jpg" alt="" />
-                </div>
-                <div className=" my-5 mx-2">
-                    <h2 className="text-primary"> Our Commitment </h2>
-                    <p>Our constant endeavor is to support the company's mandate of providing highest level of customer satisfaction by taking good care of your two-wheeler service and maintenance through our vast network of committed dealers and service outlets spread across the country.
-                    </p>
-                </div>
-            </div> */}
 
             <Container>
                 {/* Reviews Section */}
@@ -75,7 +64,7 @@ const Home = () => {
             <div className='bg-banner'>
                 <Container className='p-5'>
                     <div className='text-light text-center margin-top mb-5'>
-                        <h1 className='mb-4 underline'>Darkless Motor's Trusted Partners</h1>
+                        <h1 className='mb-4'>Darkless Motor's Trusted Partners</h1>
                         <span className='line line-small line-center'>
                             <span className=' first-lone'></span>
                             <span className=' second-line'></span>

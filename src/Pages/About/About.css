@@ -1,0 +1,65 @@
+.team-member{
+    transition: 0.8s;
+}
+.team-member:hover{
+    transform: translateY(-5%);
+    transition: 0.8s;
+    border: 0.3px solid rgba(128, 128, 128, 0.815);
+    border-radius: 5px;
+}
+.img-box{
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+.img-box::after{
+content: "";
+opacity: 0;
+background-color: rgba(250, 107, 82, 0.568);
+position: absolute;
+ right: 0;
+left: 0;
+top: 0;
+bottom: 0;
+border: 5px solid rgba(252, 163, 148, 0.568);
+margin: 5px;    
+}
+.img-box:hover:after{
+    opacity: 1;
+    transition: .8s ease-in-out;
+    }
+.icon-items{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 85%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.icon-items a{
+    border: 1px solid white;
+    padding: 5px;
+    margin: 2px;
+    color: white;
+}
+.icon-items a:hover{
+    background-color: white;
+    color: blue;
+    transition: .8s ease-in-out;
+}
+.img-box:hover .icon-items{
+    opacity: 1;
+    transition: .8s ease-in-out;
+}
+.member-info{
+    opacity: 0;
+}
+.team-member:hover .member-info{
+    opacity: 1;
+    transition: .8s ease;
+}

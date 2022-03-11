@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -21,11 +22,10 @@ const ProductCard = (props) => {
                         </div>
 
                         <div className="d-flex ">
-                            <Link className="btn text-white me-2" to ={`/purchase/${_id}`}> <button className="btn btn-success">Purchase Now</button> </Link>
+                            <Link className="btn text-white me-2" to ={`/purchase/${_id}`}> <button className="btn-basic"><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /> Purchase Now</button> </Link>
                             
                             <h5 className="mx-2 mt-2 pt-1 ms-auto"> Price: $ {price} </h5>
                         </div>
-                        {/* <button className="btn btn-success">Purchase Now</button> */}
                     </Card.Body>
                 </Card>
             </Col>
