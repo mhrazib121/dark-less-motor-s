@@ -51,7 +51,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
     }
     useEffect(() => {
-        
+
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
@@ -96,7 +96,7 @@ const useFirebase = () => {
     // Save user 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://evening-retreat-75203.herokuapp.com/users', {
+        fetch('https://darkless-motors-serverside.vercel.app/users', {
             method: method,
             headers: {
                 'Content-Type': 'application/json'
@@ -107,7 +107,7 @@ const useFirebase = () => {
     }
     useEffect(() => {
         setLoading(true)
-        fetch(`https://evening-retreat-75203.herokuapp.com/users/${user.email}`)
+        fetch(`https://darkless-motors-serverside.vercel.app/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
             .finally(setLoading(false))

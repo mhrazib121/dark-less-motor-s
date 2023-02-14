@@ -10,7 +10,7 @@ const MyOrder = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch("https://evening-retreat-75203.herokuapp.com/orders")
+        fetch("https://darkless-motors-serverside.vercel.app/orders")
             .then(res => res.json())
             .then(data => {
                 const myOrder = data.filter(order => order.email === user.email);
@@ -22,7 +22,7 @@ const MyOrder = () => {
     const cancelOrder = id => {
         const proceed = window.confirm('Are You Sure? Do You Want To Cancel Your Order');
         if (proceed) {
-            const url = `https://evening-retreat-75203.herokuapp.com/orders/${id}`;
+            const url = `https://darkless-motors-serverside.vercel.app/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

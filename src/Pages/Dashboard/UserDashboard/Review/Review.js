@@ -13,10 +13,10 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         data.img = user.photoURL;
-        axios.post('https://evening-retreat-75203.herokuapp.com/reviews', data)
+        axios.post('https://darkless-motors-serverside.vercel.app/reviews', data)
             .then(res => {
                 // console.log(res)
-                
+
                 if (res.data.insertedId) {
                     alert('Added Succesfully')
                     reset();
@@ -35,9 +35,9 @@ const Review = () => {
                     <br />
                     <input defaultValue={user.email} {...register("email", { required: true })} />
                     <br />
-                    <input placeholder="Provide rate" type="number" defaultValue="" {...register("rating", { required: true, min:1, max:5})} />
+                    <input placeholder="Provide rate" type="number" defaultValue="" {...register("rating", { required: true, min: 1, max: 5 })} />
                     <br />
-                    <input placeholder="Provide your feedback" {...register("feedback",  { required: true })} />
+                    <input placeholder="Provide your feedback" {...register("feedback", { required: true })} />
                     <br />
 
                     <button className="btn btn-primary " type="submit">Submit</button>

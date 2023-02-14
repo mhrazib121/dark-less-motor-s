@@ -8,7 +8,7 @@ const MangeProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("https://evening-retreat-75203.herokuapp.com/products")
+        fetch("https://darkless-motors-serverside.vercel.app/products")
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products])
@@ -18,7 +18,7 @@ const MangeProducts = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are You Sure? Do You Want To Delete?');
         if (proceed) {
-            const url = `https://evening-retreat-75203.herokuapp.com/products/${id}`;
+            const url = `https://darkless-motors-serverside.vercel.app/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -42,11 +42,11 @@ const MangeProducts = () => {
             </div>
             <div className="container">
                 <div className="container my-5">
-                <Row xs={1} md={3} className="g-5 p-4">
-                            {
-                                products.map(product => <ManageProductItem key={product?._id} product={product} handleDeleteProduct={handleDeleteProduct}> </ManageProductItem>)
-                            }
-                        </Row>
+                    <Row xs={1} md={3} className="g-5 p-4">
+                        {
+                            products.map(product => <ManageProductItem key={product?._id} product={product} handleDeleteProduct={handleDeleteProduct}> </ManageProductItem>)
+                        }
+                    </Row>
                 </div>
             </div>
         </div>

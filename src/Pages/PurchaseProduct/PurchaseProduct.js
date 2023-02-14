@@ -21,7 +21,7 @@ const PurchaseProduct = () => {
         data.package = productData;
         data.status = 'Pending';
 
-        axios.post('https://evening-retreat-75203.herokuapp.com/orders', data)
+        axios.post('https://darkless-motors-serverside.vercel.app/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Placing order successfully');
