@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
 const useProducts = () => {
-    const [products, setproducts] = useState([]);
+    const [products, setProducts] = useState([]);
+    const [isProductLoading, setIsProductLoading] = useState(false);
     useEffect(() => {
+        setIsProductLoading(true);
         fetch('https://darkless-motors-serverside.vercel.app/products')
             .then(res => res.json())
-            .then(data => setproducts(data))
+            .then(data => {
+                setProducts(data);
+                setIsProductLoading(false);
+            })
     }, [])
     return [
-        products
+        products,
+        isProductLoading,
     ];
 };
 

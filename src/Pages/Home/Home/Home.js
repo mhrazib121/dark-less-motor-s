@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useProducts from '../../../Hooks/useProducts';
 import ProductCard from '../../Products/ProductCard/ProductCard';
@@ -7,23 +7,35 @@ import Reviews from '../../Reviews/Reviews';
 import Header from '../../Shared/Header/Header';
 import TopBanner from '../TopBanner/TopBanner';
 import './Home.css';
-import Banner1 from '../../../Images/Banner/banner-1.png'
-import Banner2 from '../../../Images/Banner/banner-2.png'
-import Banner3 from '../../../Images/Banner/banner-3.png'
 import partner from '../../../Images/Partner/dna.png';
 import partner2 from '../../../Images/Partner/luxe.png';
 import partner3 from '../../../Images/Partner/mint.png';
 import partner4 from '../../../Images/Partner/motox.png';
 import partner5 from '../../../Images/Partner/wuezon.png';
+import useReview from '../../../Hooks/useReview';
 
 const Home = () => {
-    const [products] = useProducts();
+    const [products, isProductLoading] = useProducts();
+    const [isReviewsLoading] = useReview();
+
+    console.log("products", products)
+    console.log("isProductLoading", isProductLoading)
+
+    if (isProductLoading && isReviewsLoading) {
+        return (
+            <div className="d-flex justify-content-center align-items-center" style={{ height: "500px" }}>
+                <div className="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )
+    }
     return (
         <div>
-            <Header></Header>
+            <Header />
             {/* Top Banner */}
             {/**************/}
-            <TopBanner></TopBanner>
+            <TopBanner />
 
             <Container>
 
@@ -40,7 +52,7 @@ const Home = () => {
 
 
             </Container>
-           <br /> <br />
+            <br /> <br />
 
             <Container className='d-lg-flex justify-content-between mb-5'>
                 <div className='img-bg1'> <h3 className='text-field text-center'> Buy New Bike</h3> </div>
@@ -54,7 +66,7 @@ const Home = () => {
                 {/*******************/}
 
                 <h1 className="fs-2 text-uppercase fw-bold my-5 line-bike">Testimonials</h1>
-                <Reviews></Reviews>
+                <Reviews />
             </Container>
             <br />
 
